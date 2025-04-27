@@ -26,6 +26,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(krkrsdl2-tp_stub)
 
 add_library(ncbind STATIC)
+set_target_properties(ncbind PROPERTIES C_STANDARD 11)
 set_target_properties(ncbind PROPERTIES CXX_STANDARD 11)
 set_target_properties(ncbind PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
 target_sources(ncbind PRIVATE ncbind.cpp)
